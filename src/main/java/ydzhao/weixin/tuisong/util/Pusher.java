@@ -17,10 +17,10 @@ public class Pusher {
     /**
      * 测试号的appId和secret
      */
-    private static String appId = "xxx";
-    private static String secret = "6e2a329fd59e83fb87f013cd3a405137";
+    private static String appId = "wxba0d6bb28ce573b6";
+    private static String secret = "8cdce221d4e326f08511d1af62a8aa4c";
     //模版id
-    private static String templateId = "BmHHbIFsP7SqjebQ5rgDRjBxPtRcDxgrvqyiAojgrh8";
+    private static String templateId = "AgHfRInWmzSrgsUhmHEra0HR74sBYHHD9TZ3CnUg7Do";
 
     public static void push(String openId){
         //1，配置
@@ -45,21 +45,8 @@ public class Pusher {
         templateMessage.addData(new WxMpTemplateData("low",todayWeather.getString("low") + "","#173177"));
         templateMessage.addData(new WxMpTemplateData("high",todayWeather.getString("high")+ "","#FF6347" ));
         templateMessage.addData(new WxMpTemplateData("caihongpi",CaiHongPi.getCaiHongPi(),"#FF69B4"));
-        templateMessage.addData(new WxMpTemplateData("lianai",JiNianRi.getLianAi()+"","#FF1493"));
         templateMessage.addData(new WxMpTemplateData("shengri",JiNianRi.getShengRi()+"","#FFA500"));
         templateMessage.addData(new WxMpTemplateData("jinju",CaiHongPi.getJinJu()+"","#C71585"));
-        //templateMessage.addData(new WxMpTemplateData("jiehun",JiNianRi.getJieHun()+""));
-        templateMessage.addData(new WxMpTemplateData("linzhen",JiNianRi.getLinZhen()+"","#FF6347"));
-        String beizhu = "";
-        if(JiNianRi.getJieHun() % 365 == 0){
-            beizhu = "今天是结婚纪念日！";
-        }
-        if(JiNianRi.getLianAi() % 365 == 0){
-            beizhu = "今天是恋爱纪念日！";
-        }
-        if(JiNianRi.getLinZhen() % 365 == 0){
-            beizhu = "今天是结婚纪念日！";
-        }
         templateMessage.addData(new WxMpTemplateData("beizhu",beizhu,"#FF0000"));
 
 
