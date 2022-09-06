@@ -11,21 +11,9 @@ import java.text.SimpleDateFormat;
  */
 public class JiNianRi {
     /**
-     * 恋爱
-     */
-    static String lianAi = "2018-05-21";
-    /**
-     * 领证
-     */
-    static String linZheng = "2022-03-19";
-    /**
-     * 结婚
-     */
-    static String jieHun = "2022-07-08";
-    /**
      * 生日
      */
-    static String shengRi = "2023-03-02";
+    static String shengRi = "2002-12-21";
 
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
